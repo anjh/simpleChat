@@ -8,7 +8,7 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', function(socket){
-  
+
   socket.on('chat message', function(msg){
     console.log('message: ' + msg);
     io.emit('chat message', msg);
@@ -16,5 +16,5 @@ io.on('connection', function(socket){
 });
 
 http.listen(3000, function(){
-  console.log('listening on *:3000');
+  console.log('listening on *:8080');
 });
